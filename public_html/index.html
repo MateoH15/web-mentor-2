@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Servicios de Creación Web</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .bg-gradient {
+        background: linear-gradient(
+          to bottom,
+          #000,
+          #2b3838,
+          #000,
+          #2b3838,
+          #000
+        ); /* Gradiente de fondo */
+      }
+    </style>
+  </head>
+  <body class="bg-gradient text-white">
+    <header class="py-6 px-4 md:px-8 lg:px-12">
+      <div class="container mx-auto flex justify-between items-center">
+        <a
+          href="#"
+          class="flex items-center text-3xl font-semibold bg-clip-text text-bg-primary"
+          style="font-family: Raleway, sans-serif;"
+        >
+          <img
+            src="img/Logo_WebMentor-removebg-preview.png"
+            alt="Logo WebMentor"
+            class="h-16 w-16 mr-1"
+          />
+          WebMentor
+        </a>
+        <!-- Botón hamburguesa (solo visible en móvil) -->
+        <button
+          id="menu-btn"
+          class="md:hidden text-white focus:outline-none"
+          aria-label="Abrir menú"
+        >
+          <svg
+            class="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+        <!-- Menú de navegación -->
+        <nav id="navbar" class="hidden md:flex space-x-6">
+          <a href="index.html" class="hover:underline underline-offset-4 transition duration-300"
+            >Inicio</a
+          >
+          <a href="#about-us" class="hover:underline underline-offset-4 transition duration-300"
+            >Nosotros</a
+          >
+          <a href="#services" class="hover:underline underline-offset-4 transition duration-300"
+            >Servicios</a
+          >
+          <a href="pages/herramientas.html" class="hover:underline underline-offset-4 transition duration-300"
+            >Herramientas</a
+          >
+          <a href="#faq" class="hover:underline underline-offset-4 transition duration-300"
+            >FAQ</a
+          >
+        </nav>
+        <a
+          href="#contact"
+          class="hidden md:inline-block bg-gradient-to-r from-[#338281] to-[#2b3838] text-white px-6 py-3 rounded-full hover:from-[#2b3838] hover:bg-[#338281] transition duration-300"
+        >
+          Contáctanos
+        </a>
+      </div>
+      <!-- Menú móvil (oculto por defecto) -->
+      <div id="mobile-menu" class="md:hidden hidden px-4 pt-4 pb-2">
+        <nav class="flex flex-col space-y-2">
+          <a href="index.html" class="hover:underline underline-offset-4 transition duration-300"
+            >Inicio</a
+          >
+          <a href="#about-us" class="hover:underline underline-offset-4 transition duration-300"
+            >Nosotros</a
+          >
+          <a href="#services" class="hover:underline underline-offset-4 transition duration-300"
+            >Servicios</a
+          >
+          <a href="pages/herramientas.html" class="hover:underline underline-offset-4 transition duration-300"
+            >Herramientas</a
+          >
+          <a href="#faq" class="hover:underline underline-offset-4 transition duration-300"
+            >FAQ</a
+          >
+          <a
+            href="#contact"
+            class="mt-2 bg-gradient-to-r from-[#338281] to-[#2b3838] text-white px-6 py-3 rounded-full hover:from-[#2b3838] hover:to-[#338281] transition duration-300 text-center"
+            >Contáctanos</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="py-16 px-4 md:px-8 lg:px-12 mb-12">
+        <div class="container mx-auto text-center">
+          <h1
+            class="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-[#338281] to-[#f1f1f1] mb-4 leading-normal pb-2 mt-4"
+          >
+            Impulsamos tu negocio con Soluciones Digitales
+          </h1>
+          <p class="text-lg text-gray-300 mb-8">
+            Un equipo de expertos en desarrollo web apasionados por crear
+            soluciones innovadoras y efectivas.
+          </p>
+          <div class="flex justify-center space-x-4">
+            <a href="#contact" class="bg-[#338281] text-black px-8 py-3 rounded-full hover:bg-[#2E7071] hover:text-white transition duration-300"> Contactar</a>
+            <a
+              href="#planes"
+              class="bg-transparent border border-[#338281] text-white px-8 py-3 rounded-full hover:bg-[#338281] hover:text-white transition duration-300"
+              >Ver Planes</a
+            >
+          </div>
+        </div>
+      </section>
+
+<!-- Sección Servicios con imagen y lista en dos columnas, título centrado arriba, con animación en los servicios -->
+<section id="services" class="py-16 px-4 md:px-8 lg:px-12 bg-black-100">
+  <div class="container mx-auto">
+    <h2 class="text-4xl font-semibold text-white text-center">
+      Servicios
+    </h2>
+    <div class="flex flex-col md:flex-row items-center gap-12">
+      <!-- Columna Imagen -->
+      <div class="md:w-1/2 flex justify-center mb-8 md:mb-0">
+        <img src="img/Domain Authority 3D Animated Icon.png" alt="Servicios WebMentor" class="" />
+      </div>
+      <!-- Columna Servicios -->
+      <div class="md:w-1/2">
+        <ul class="space-y-8">
+          <li class="flex items-start transition-transform duration-300 hover:scale-105 hover:bg-[#338281]/10 rounded-lg p-4 group">
+            <span class="flex-shrink-0 bg-[#338281] bg-opacity-20 rounded-full p-3 mr-4 group-hover:animate-bounce">
+              <svg class="w-7 h-7 text-[#338281]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 4h16v16H4z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 8h8v8H8z" />
+              </svg>
+            </span>
+            <div>
+              <h3 class="text-xl font-semibold text-[#fff] mb-2 group-hover:underline transition">Desarrollo Web</h3>
+              <p class="text-gray-300">
+                Utilizamos las últimas tecnologías y tendencias en desarrollo web para crear soluciones innovadoras y personalizadas.
+              </p>
+            </div>
+          </li>
+          <li class="flex items-start transition-transform duration-300 hover:scale-105 hover:bg-[#338281]/10 rounded-lg p-4 group">
+            <span class="flex-shrink-0 bg-[#338281] bg-opacity-20 rounded-full p-3 mr-4 group-hover:animate-bounce">
+              <svg class="w-7 h-7 text-[#338281]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3" />
+                <circle cx="12" cy="12" r="10" />
+              </svg>
+            </span>
+            <div>
+              <h3 class="text-xl font-semibold text-[#fff] mb-2 group-hover:underline transition">Mantenimiento Web</h3>
+              <p class="text-gray-300">
+                Tu sitio web siempre al día. Actualizaciones, seguridad y soporte para un rendimiento óptimo.
+              </p>
+            </div>
+          </li>
+          <li class="flex items-start transition-transform duration-300 hover:scale-105 hover:bg-[#338281]/10 rounded-lg p-4 group">
+            <span class="flex-shrink-0 bg-[#338281] bg-opacity-20 rounded-full p-3 mr-4 group-hover:animate-bounce">
+              <svg class="w-7 h-7 text-[#338281]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 16l4-4 4 4" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 12V4" />
+              </svg>
+            </span>
+            <div>
+              <h3 class="text-xl font-semibold text-[#fff] mb-2 group-hover:underline transition">Optimización SEO</h3>
+              <p class="text-gray-300">
+                Aumenta tu visibilidad. Mejoramos tu posicionamiento en buscadores para atraer más tráfico orgánico.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <!-- Sección: Tipos de Planes -->
+<section id="planes" class="py-16 px-4 md:px-8 lg:px-12 bg-black-100">
+  <div class="container mx-auto">
+    <h2 class="text-3xl font-semibold text-white mb-10 text-center">
+      Nuestros Planes
+    </h2>
+    <p class="text-lg text-gray-300 mb-12 text-center">
+      Elige el plan que mejor se adapte a tu negocio. Haz clic para ver más detalles de cada uno.
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <!-- Landing Page -->
+      <a href="./pages/landing-pages.html" class="bg-[#f1f1f1] rounded-lg p-8 flex flex-col items-center shadow-lg hover:scale-105 hover:bg-[#338281]/20 transition-transform duration-300 group cursor-pointer">
+        <svg class="w-12 h-12 mb-4 text-[#338281] group-hover:animate-bounce" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <rect x="3" y="7" width="18" height="13" rx="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M16 3v4M8 3v4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h3 class="text-xl font-semibold mb-2" style="color: #2E7071;">Landing Page</h3>
+        <p class="group-hover:text-[#f1f1f1] transition-colors duration-300 text-black text-center text-base mb-2">
+          Capta clientes y muestra tu propuesta de valor en una sola página.
+        </p>
+        
+
+        <span class="mt-4 text-blue-400 font-semibold group-hover:underline transition" style="color: #2E7071;">Ver más</span>
+      </a>
+      <!-- E-commerce -->
+      <a href="./pages/e-commerce.html" class="bg-[#f1f1f1] rounded-lg p-8 flex flex-col items-center shadow-lg hover:scale-105 hover:bg-[#338281]/20 transition-transform duration-300 group cursor-pointer">
+        <svg class="w-12 h-12 mb-4 text-[#338281] group-hover:animate-bounce" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M3 3h2l.4 2M7 13h10l4-8H5.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="7" cy="21" r="1" />
+          <circle cx="20" cy="21" r="1" />
+        </svg>
+        <h3 class="text-xl font-semibold text-blue-400 mb-2" style="color: #2E7071;">E-commerce</h3>
+        <p class="group-hover:text-[#f1f1f1] transition-colors duration-300 text-black text-center text-base mb-2">
+          Vende tus productos online con una tienda segura y moderna.
+        </p>
+
+        <span class="mt-4 text-blue-400 font-semibold group-hover:underline transition" style="color: #2E7071;">Ver más</span>
+      </a>
+      <!-- Restaurantes -->
+      <a href="./pages/restaurantes.html" class="bg-[#f1f1f1] rounded-lg p-8 flex flex-col items-center shadow-lg hover:scale-105 hover:bg-[#338281]/20 transition-transform duration-300 group cursor-pointer">
+        <svg class="w-12 h-12 mb-4 text-[#338281] group-hover:animate-bounce" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M4 21v-7M4 10V3M8 21v-7M8 10V3M12 21V3M16 21v-7M16 10V3M20 21v-7M20 10V3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h3 class="text-xl font-semibold text-blue-400 mb-2" style="color: #2E7071;">Restaurantes</h3>
+        <p class="group-hover:text-[#f1f1f1] transition-colors duration-300 text-black text-center text-base mb-2">
+          Menú digital, reservas online y pedidos para llevar.
+        </p>
+        
+        <span class="mt-4 text-blue-400 font-semibold group-hover:underline transition" style="color: #2E7071;">Ver más</span>
+      </a>
+      <!-- Sitio Corporativo -->
+      <a href="./pages/hoteles.html" class="bg-[#f1f1f1] rounded-lg p-8 flex flex-col items-center shadow-lg hover:scale-105 hover:bg-[#338281]/20 transition-transform duration-300 group cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 mb-4 text-[#338281] group-hover:animate-bounce">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205 3 1m1.5.5-1.5-.5M6.75 7.364V3h-3v18m3-13.636 10.5-3.819" />
+        </svg>
+
+        <h3 class="text-xl font-semibold text-blue-400 mb-2" style="color: #2E7071;">Hoteles</h3>
+        <p class="group-hover:text-[#f1f1f1] transition-colors duration-300 text-black text-center text-base mb-2">
+          Presencia profesional para tu empresa, con secciones personalizadas.
+        </p>
+       
+        <span class="mt-4 text-blue-400 font-semibold group-hover:underline transition" style="color: #2E7071;">Ver más</span>
+      </a>
+      <a href="./pages/emprendedores.html" class="bg-[#f1f1f1] rounded-lg p-8 flex flex-col items-center shadow-lg hover:scale-105 hover:bg-[#338281]/20 transition-transform duration-300 group cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 mb-4 text-[#338281] group-hover:animate-bounce">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
+        </svg>
+
+        <h3 class="text-xl font-semibold text-blue-400 mb-2" style="color: #2E7071;">Emprendedores</h3>
+        <p class="group-hover:text-[#f1f1f1] transition-colors duration-300 text-black text-center text-base mb-2">
+          Presencia profesional para tu empresa, con secciones personalizadas.
+        </p>
+       
+        <span class="mt-4 text-blue-400 font-semibold group-hover:underline transition" style="color: #2E7071;">Ver más</span>
+      </a>
+      <a href="./pages/contadores.html" class="bg-[#f1f1f1] rounded-lg p-8 flex flex-col items-center shadow-lg hover:scale-105 hover:bg-[#338281]/20 transition-transform duration-300 group cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 mb-4 text-[#338281] group-hover:animate-bounce">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M11.35 3.836c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m8.9-4.414c.376.023.75.05 1.124.08 1.131.094 1.976 1.057 1.976 2.192V16.5A2.25 2.25 0 0 1 18 18.75h-2.25m-7.5-10.5H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V18.75m-7.5-10.5h6.375c.621 0 1.125.504 1.125 1.125v9.375m-8.25-3 1.5 1.5 3-3.75" />
+        </svg>
+
+        <h3 class="text-xl font-semibold text-blue-400 mb-2" style="color: #2E7071;">Contadores</h3>
+        <p class="group-hover:text-[#f1f1f1] transition-colors duration-300 text-black text-center text-base mb-2">
+          Presencia profesional para tu empresa, con secciones personalizadas.
+        </p>
+       
+        <span class="mt-4 text-blue-400 font-semibold group-hover:underline transition" style="color: #2E7071;">Ver más</span>
+      </a>
+      <a href="./pages/abogados.html" class="bg-[#f1f1f1] rounded-lg p-8 flex flex-col items-center shadow-lg hover:scale-105 hover:bg-[#338281]/20 transition-transform duration-300 group cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 mb-4 text-[#338281] group-hover:animate-bounce">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0 0 12 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 0 1-2.031.352 5.988 5.988 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971Zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 0 1-2.031.352 5.989 5.989 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971Z" />
+        </svg>
+
+        <h3 class="text-xl font-semibold text-blue-400 mb-2" style="color: #2E7071;">Abogados</h3>
+        <p class="group-hover:text-[#f1f1f1] transition-colors duration-300 text-black text-center text-base mb-2">
+          Presencia profesional para tu empresa, con secciones personalizadas.
+        </p>
+       
+        <span class="mt-4 text-blue-400 font-semibold group-hover:underline transition" style="color: #2E7071;">Ver más</span>
+      </a>
+      <a href="./pages/negocios.html" class="bg-[#f1f1f1] rounded-lg p-8 flex flex-col items-center shadow-lg hover:scale-105 hover:bg-[#338281]/20 transition-transform duration-300 group cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 mb-4 text-[#338281] group-hover:animate-bounce">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349M3.75 21V9.349m0 0a3.001 3.001 0 0 0 3.75-.615A2.993 2.993 0 0 0 9.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 0 0 2.25 1.016c.896 0 1.7-.393 2.25-1.015a3.001 3.001 0 0 0 3.75.614m-16.5 0a3.004 3.004 0 0 1-.621-4.72l1.189-1.19A1.5 1.5 0 0 1 5.378 3h13.243a1.5 1.5 0 0 1 1.06.44l1.19 1.189a3 3 0 0 1-.621 4.72M6.75 18h3.75a.75.75 0 0 0 .75-.75V13.5a.75.75 0 0 0-.75-.75H6.75a.75.75 0 0 0-.75.75v3.75c0 .414.336.75.75.75Z" />
+        </svg>
+
+        
+        <h3 class="text-xl font-semibold text-blue-400 mb-2" style="color: #2E7071;">Negocios
+        </h3>
+        <p class="group-hover:text-[#f1f1f1] transition-colors duration-300 text-black text-center text-base mb-2">
+          Presencia profesional para tu empresa, con secciones personalizadas.
+        </p>
+       
+        <span class="mt-4 text-blue-400 font-semibold group-hover:underline transition" style="color: #2E7071;">Ver más</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+      <section id="about-us" class="py-16 px-4 md:px-8 lg:px-12">
+        <div class="container mx-auto">
+          <h2 class="text-3xl font-semibold text-white mb-8 text-center">
+            Por qué WebMentor
+          </h2>
+          <p class="text-lg text-gray-300 mb-8 text-center">
+            En Web Mentor, somos un equipo de desarrolladores web creativos y
+            experimentados, comprometidos con la excelencia y la innovación.
+            Ayudamos a las empresas a alcanzar sus objetivos a través de
+            soluciones digitales personalizadas.
+          </p>
+        </div>
+        <div
+          class="flex flex-col md:flex-row items-center md:items-start md:justify-center gap-8 mt-8"
+        >
+          <!-- Texto -->
+          <div class="md:w-1/2">
+            <h3
+              class="text-2xl font-semibold text-[#318282] mb-4 text-left md:text-left"
+            >
+              Empoderar a las empresas, impulsando su crecimiento y éxito en el
+              mundo digital.
+            </h3>
+            <ul class="list-disc list-inside text-lg text-gray-300 mb-4 pl-4">
+              <li>Innovación</li>
+              <li>Calidad</li>
+              <li>Compromiso</li>
+              <li>Transparencia</li>
+              <li>Colaboración</li>
+            </ul>
+            <p class="text-gray-300">
+              Nos apasiona crear soluciones web de alta calidad, que superen las
+              expectativas de nuestros clientes. Nos aseguramos de que cada
+              proyecto cumpla con los más altos estándares de rendimiento,
+              seguridad y diseño.
+            </p>
+          </div>
+          <!-- Imagen -->
+          <div class="md:w-1/3 flex justify-center">
+            <img
+              src="img/Domain Authority 3D Animated Icon (1).png"
+              alt="Valores WebMentor"
+              class="rounded-lg shadow-lg max-w-xs w-full"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="py-16 px-4 md:px-8 lg:px-12">
+        <div class="container mx-auto">
+          <h2 class="text-3xl font-semibold text-white mb-8 text-center">
+            Testimonios
+          </h2>
+          <p class="text-lg text-gray-300 mb-12 text-center">
+            Lo más importante, nuestros clientes satisfechos con los resultados.
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-[#2B4545] rounded-lg p-6">
+              <p class="text-gray-300 mb-4">
+                "El equipo de WebMentor superó nuestras expectativas. Su
+                profesionalismo y atención al detalle son excepcionales."
+              </p>
+              <p class="text-blue-400 font-semibold">Juan Pérez</p>
+              <p class="text-gray-500">CEO de Empresa XYZ</p>
+            </div>
+            <div class="bg-[#2B4545] rounded-lg p-6">
+              <p class="text-gray-300 mb-4">
+                "Gracias a WebMentor, nuestro sitio web ha mejorado
+                significativamente. ¡Recomendados al 100%!"
+              </p>
+              <p class="text-blue-400 font-semibold">María López</p>
+              <p class="text-gray-500">Gerente de Marketing</p>
+            </div>
+            <div class="bg-[#2B4545] rounded-lg p-6">
+              <p class="text-gray-300 mb-4">
+                "Un equipo increíble. Siempre dispuestos a ayudar y resolver
+                cualquier duda."
+              </p>
+              <p class="text-blue-400 font-semibold">Carlos García</p>
+              <p class="text-gray-500">Fundador de Startup ABC</p>
+            </div>
+        </div>
+      </section>
+      </section>
+      <!-- Call to Action -->
+      <section class="py-12 px-4 md:px-8 lg:px-12 bg-black">
+  <div class="container mx-auto text-center">
+    <h2
+      class="text-3xl md:text-4xl font-bold text-white mb-4"
+      style="text-shadow: 10px 10px 8px #2b3838;"
+    >
+      ¿Listo para que tu negocio crezca?
+    </h2>
+    <p class="text-lg text-gray-200 mb-8">
+      Contáctanos hoy y descubre cómo podemos ayudarte a crecer en el mundo digital.
+    </p>
+    <a
+      href="#contact"
+      class="inline-block bg-white text-[#338281] font-semibold px-8 py-4 rounded-full shadow-lg hover:bg-[#2E7071] hover:text-white transition duration-300 text-lg"
+    >
+      ¡Quiero mi web profesional!
+    </a>
+  </div>
+</section>
+    </main>
+
+    <section class="py-16 px-4 md:px-8 lg:px-12">
+  <div class="container mx-auto">
+    <h2 class="text-3xl font-semibold text-white mb-10 text-center">
+      ¿Cómo trabajamos?
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <!-- Paso 1 -->
+      <div class="bg-[#2d2d2d] rounded-lg p-6 flex flex-col items-center shadow-lg hover:scale-105 hover:bg-[#338281]/20 transition-transform duration-300 group">
+        <div class="bg-[#338281] text-white rounded-full w-14 h-14 flex items-center justify-center mb-4 text-2xl font-bold shadow-lg group-hover:animate-bounce">
+          1
+        </div>
+        <h3 class="text-xl font-semibold text-white mb-2">Análisis</h3>
+        <p class="text-gray-300 text-center text-base">
+          Hacemos un análisis de tus necesidades y objetivos mediante una reunión virtual corta y gratuita. Definimos la estrategia y el alcance de tu proyecto.
+        </p>
+      </div>
+      <!-- Paso 2 -->
+      <div class="bg-[#2d2d2d] rounded-lg p-6 flex flex-col items-center shadow-lg hover:scale-105 hover:bg-[#338281]/20 transition-transform duration-300 group">
+        <div class="bg-[#338281] text-white rounded-full w-14 h-14 flex items-center justify-center mb-4 text-2xl font-bold shadow-lg group-hover:animate-bounce">
+          2
+        </div>
+        <h3 class="text-xl font-semibold text-white mb-2">Diseño</h3>
+        <p class="text-gray-300 text-center text-base">
+          Creamos una experiencia visual atractiva y funcional. Diseñamos la interfaz y la experiencia de usuario.
+        </p>
+      </div>
+      <!-- Paso 3 -->
+      <div class="bg-[#2d2d2d] rounded-lg p-6 flex flex-col items-center shadow-lg hover:scale-105 hover:bg-[#338281]/20 transition-transform duration-300 group">
+        <div class="bg-[#338281] text-white rounded-full w-14 h-14 flex items-center justify-center mb-4 text-2xl font-bold shadow-lg group-hover:animate-bounce">
+          3
+        </div>
+        <h3 class="text-xl font-semibold text-white mb-2">Desarrollo</h3>
+        <p class="text-gray-300 text-center text-base">
+          Transformamos el diseño en realidad. Codificamos y construimos tu sitio web.
+        </p>
+      </div>
+      <!-- Paso 4 -->
+      <div class="bg-[#2d2d2d] rounded-lg p-6 flex flex-col items-center shadow-lg hover:scale-105 hover:bg-[#338281]/20 transition-transform duration-300 group">
+        <div class="bg-[#338281] text-white rounded-full w-14 h-14 flex items-center justify-center mb-4 text-2xl font-bold shadow-lg group-hover:animate-bounce">
+          4
+        </div>
+        <h3 class="text-xl font-semibold text-white mb-2">Lanzamiento</h3>
+        <p class="text-gray-300 text-center text-base">
+          Tu proyecto listo para el mundo. Lanzamos tu sitio web y te brindamos soporte continuo.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    </section>
+      <!-- Sección de Contacto -->
+      <section id="contact" class="py-16 px-4 md:px-8 lg:px-12">
+        <div class="container mx-auto">
+          <h2 class="text-3xl font-semibold text-white mb-8 text-center">
+            Contáctanos
+          </h2>
+          <div class="flex flex-col md:flex-row gap-8 justify-center items-stretch">
+            <!-- Formulario -->
+            <div class="bg-[#2d2d2d] rounded-lg shadow-lg p-8 flex-1">
+              <form class="space-y-6">
+                <div>
+                  <label for="nombre" class="block text-gray-300 mb-2">Nombre</label>
+                  <input type="text" id="nombre" name="nombre" required class="w-full px-4 py-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-[#338281] transition" />
+                </div>
+                <div>
+                  <label for="email" class="block text-gray-300 mb-2">Email</label>
+                  <input type="email" id="email" name="email" required class="w-full px-4 py-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-[#338281] transition" />
+                </div>
+                <div>
+                  <label for="mensaje" class="block text-gray-300 mb-2">Mensaje</label>
+                  <textarea id="mensaje" name="mensaje" rows="4" required class="w-full px-4 py-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-[#338281] transition"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-gradient-to-r from-[#338281] to-[#2b3838] text-white py-3 rounded-full font-semibold hover:from-[#2b3838] hover:to-[#338281] transition duration-300">
+                  Enviar Mensaje
+                </button>
+              </form>
+            </div>
+            <!-- Información de contacto -->
+            <div class="bg-[#2d2d2d] rounded-lg shadow-lg p-8 flex-1 flex flex-col justify-center animate__animated animate__fadeInRight">
+              <h3 class="text-2xl font-semibold text-[#338281] mb-6">Información de Contacto</h3>
+              <div class="flex items-center mb-4">
+                <svg class="w-7 h-7 text-[#338281] mr-4 animate-bounce" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M16 12A4 4 0 1 0 8 12a4 4 0 0 0 8 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 14v7m0 0H9m3 0h3" />
+                </svg>
+                <span class="text-gray-300">Santiago del Estero, Argentina</span>
+              </div>
+              <div class="flex items-center mb-4">
+                <svg class="w-7 h-7 text-[#338281] mr-4 animate-pulse" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M16 12A4 4 0 1 0 8 12a4 4 0 0 0 8 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6" />
+                </svg>
+                <span class="text-gray-300">+54 385 499 7505</span>
+              </div>
+              <div class="flex items-center mb-4">
+                <svg class="w-7 h-7 text-[#338281] mr-4 animate-spin" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M16 12A4 4 0 1 0 8 12a4 4 0 0 0 8 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2 12h2m16 0h2M12 2v2m0 16v2" />
+                </svg>
+                <span class="text-gray-300">info@webmentor.com</span>
+              </div>
+              <div class="flex items-center">
+                <svg class="w-7 h-7 text-[#338281] mr-4 animate-bounce" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17 8h2a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h2" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v-7m0 0L9.5 9.5M12 8l2.5 1.5" />
+                </svg>
+                <a href="https://webmentor.com" target="_blank" class="text-blue-400 hover:underline">www.webmentor.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección FAQ -->
+<section class="py-16 px-4 md:px-8 lg:px-12">
+  <div class="container mx-auto max-w-3xl">
+    <h2 class="text-3xl font-semibold text-white mb-10 text-center">
+      Preguntas Frecuentes
+    </h2>
+    <div class="space-y-4" id="faq">
+      <!-- FAQ Item -->
+      <div class="bg-[#2d2d2d] rounded-lg shadow-lg">
+        <button type="button" class="w-full flex justify-between items-center px-6 py-4 text-left text-lg font-semibold text-white focus:outline-none faq-toggle">
+          ¿Cuánto tiempo tarda en completarse un proyecto?
+          <span class="ml-2 transition-transform duration-300">&#9660;</span>
+        </button>
+        <div class="faq-content px-6 pb-4 text-gray-300 hidden">
+          El tiempo de finalización de un proyecto varía según la complejidad y los requisitos específicos. Generalmente, un sitio web básico puede completarse en 2-4 semanas y un proyecto más complejo puede tardar de 4 a 8 semanas.
+        </div>
+      </div>
+      <div class="bg-[#2d2d2d] rounded-lg shadow-lg">
+        <button type="button" class="w-full flex justify-between items-center px-6 py-4 text-left text-lg font-semibold text-white focus:outline-none faq-toggle">
+          ¿Cómo se comunican los clientes durante el proyecto?
+          <span class="ml-2 transition-transform duration-300">&#9660;</span>
+        </button>
+        <div class="faq-content px-6 pb-4 text-gray-300 hidden">
+          Nos comunicamos regularmente con nuestros clientes a través de reuniones virtuales, correos electrónicos y llamadas telefónicas para asegurar que el proyecto avance según lo planeado.
+        </div>
+      </div>
+      <div class="bg-[#2d2d2d] rounded-lg shadow-lg">
+        <button type="button" class="w-full flex justify-between items-center px-6 py-4 text-left text-lg font-semibold text-white focus:outline-none faq-toggle">
+          ¿Cuánto cuesta un sitio web?
+          <span class="ml-2 transition-transform duration-300">&#9660;</span>
+        </button>
+        <div class="faq-content px-6 pb-4 text-gray-300 hidden">
+          En WebMentor, no solo creamos sitios web, sino que construimos relaciones a largo plazo. Nuestra estructura de pago se basa en un pago inicial seguido de una mensualidad continua, lo que te permite:<br>
+          • Contar con un sitio web profesional desde el inicio.<br>
+          • Asegurar el mantenimiento y la actualización constante de tu sitio.<br>
+          • Disfrutar de soporte técnico continuo.<br>
+          • Adaptar tu sitio web a las necesidades cambiantes de tu negocio.<br>
+          Esta modalidad te brinda tranquilidad y te permite enfocarte en hacer crecer tu negocio, mientras nosotros nos encargamos de tu presencia en línea. Contáctanos para obtener más detalles y una cotización personalizada.
+        </div>
+      </div>
+      <div class="bg-[#2d2d2d] rounded-lg shadow-lg">
+        <button type="button" class="w-full flex justify-between items-center px-6 py-4 text-left text-lg font-semibold text-white focus:outline-none faq-toggle">
+          ¿Qué factores influyen en el costo de un proyecto?
+          <span class="ml-2 transition-transform duration-300">&#9660;</span>
+        </button>
+        <div class="faq-content px-6 pb-4 text-gray-300 hidden">
+          Los factores que influyen en el costo de un proyecto incluyen la complejidad del diseño, la cantidad de páginas, las funcionalidades requeridas, la integración con otras plataformas y el tiempo de desarrollo.
+        </div>
+      </div>
+      <div class="bg-[#2d2d2d] rounded-lg shadow-lg">
+        <button type="button" class="w-full flex justify-between items-center px-6 py-4 text-left text-lg font-semibold text-white focus:outline-none faq-toggle">
+          ¿Ofrecen planes de pago o financiamiento?
+          <span class="ml-2 transition-transform duration-300">&#9660;</span>
+        </button>
+        <div class="faq-content px-6 pb-4 text-gray-300 hidden">
+          Sí, ofrecemos planes de pago flexibles y opciones de financiamiento para facilitar la inversión en tu sitio web.
+        </div>
+      </div>
+      <div class="bg-[#2d2d2d] rounded-lg shadow-lg">
+        <button type="button" class="w-full flex justify-between items-center px-6 py-4 text-left text-lg font-semibold text-white focus:outline-none faq-toggle">
+          ¿Qué formas de pago aceptan?
+          <span class="ml-2 transition-transform duration-300">&#9660;</span>
+        </button>
+        <div class="faq-content px-6 pb-4 text-gray-300 hidden">
+          Aceptamos diversas formas de pago, incluyendo transferencias bancarias, tarjetas de débito y crédito (IVA incluido).
+        </div>
+      </div>
+      <div class="bg-[#2d2d2d] rounded-lg shadow-lg">
+        <button type="button" class="w-full flex justify-between items-center px-6 py-4 text-left text-lg font-semibold text-white focus:outline-none faq-toggle">
+          ¿Existen costos ocultos?
+          <span class="ml-2 transition-transform duration-300">&#9660;</span>
+        </button>
+        <div class="faq-content px-6 pb-4 text-gray-300 hidden">
+          No, todos los costos se detallan claramente en nuestras propuestas y contratos. No hay costos ocultos.
+        </div>
+      </div>
+      <div class="bg-[#2d2d2d] rounded-lg shadow-lg">
+        <button type="button" class="w-full flex justify-between items-center px-6 py-4 text-left text-lg font-semibold text-white focus:outline-none faq-toggle">
+          ¿Qué sucede si necesito cambios adicionales después de la entrega?
+          <span class="ml-2 transition-transform duration-300">&#9660;</span>
+        </button>
+        <div class="faq-content px-6 pb-4 text-gray-300 hidden">
+          Ofrecemos servicios de mantenimiento y soporte para realizar cambios adicionales después de la entrega del proyecto. Estos servicios pueden tener un costo adicional dependiendo de la naturaleza de los cambios.
+        </div>
+      </div>
+      <div class="bg-[#2d2d2d] rounded-lg shadow-lg">
+        <button type="button" class="w-full flex justify-between items-center px-6 py-4 text-left text-lg font-semibold text-white focus:outline-none faq-toggle">
+          ¿Los sitios web que crean son compatibles con dispositivos móviles?
+          <span class="ml-2 transition-transform duration-300">&#9660;</span>
+        </button>
+        <div class="faq-content px-6 pb-4 text-gray-300 hidden">
+          Sí, todos nuestros sitios web están diseñados para ser completamente responsivos y compatibles con dispositivos móviles.
+        </div>
+      </div>
+      <div class="bg-[#2d2d2d] rounded-lg shadow-lg">
+        <button type="button" class="w-full flex justify-between items-center px-6 py-4 text-left text-lg font-semibold text-white focus:outline-none faq-toggle">
+          ¿Ofrecen servicios de mantenimiento y soporte técnico?
+          <span class="ml-2 transition-transform duration-300">&#9660;</span>
+        </button>
+        <div class="faq-content px-6 pb-4 text-gray-300 hidden">
+          Sí, ofrecemos servicios de mantenimiento y soporte técnico para asegurar que tu sitio web funcione de manera óptima en todo momento.
+        </div>
+      </div>
+      <div class="bg-[#2d2d2d] rounded-lg shadow-lg">
+        <button type="button" class="w-full flex justify-between items-center px-6 py-4 text-left text-lg font-semibold text-white focus:outline-none faq-toggle">
+          ¿Pueden ayudarme con el alojamiento y el dominio de mi sitio web?
+          <span class="ml-2 transition-transform duration-300">&#9660;</span>
+        </button>
+        <div class="faq-content px-6 pb-4 text-gray-300 hidden">
+          Sí, podemos ayudarte a elegir y configurar el alojamiento y el dominio de tu sitio web.
+        </div>
+      </div>
+      <div class="bg-[#2d2d2d] rounded-lg shadow-lg">
+        <button type="button" class="w-full flex justify-between items-center px-6 py-4 text-left text-lg font-semibold text-white focus:outline-none faq-toggle">
+          ¿Qué información necesito proporcionarles para empezar?
+          <span class="ml-2 transition-transform duration-300">&#9660;</span>
+        </button>
+        <div class="faq-content px-6 pb-4 text-gray-300 hidden">
+          Necesitamos información sobre tu negocio, tus objetivos, el contenido que deseas incluir en el sitio web y cualquier preferencia de diseño que tengas.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-[#181e1e] text-gray-300 py-12 mt-12">
+  <div class="container mx-auto px-4 flex flex-col md:flex-row md:justify-between gap-12">
+    <!-- Logo y descripción -->
+    <div class="md:w-1/4 flex flex-col items-center md:items-start">
+      <img src="img/Logo_WebMentor-removebg-preview.png" alt="Logo WebMentor" class="h-16 w-16 mb-4" />
+      <span class="text-xl font-semibold text-white mb-2">WebMentor</span>
+      <p class="text-gray-400 text-sm">
+        Soluciones digitales para potenciar tu negocio.
+      </p>
+    </div>
+    <!-- Información de contacto -->
+    <div class="md:w-1/4">
+      <h4 class="text-lg font-semibold text-[#338281] mb-4">Contacto</h4>
+      <ul class="space-y-2">
+        <li class="flex items-center">
+          <svg class="w-5 h-5 text-[#338281] mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16 12A4 4 0 1 0 8 12a4 4 0 0 0 8 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 14v7m0 0H9m3 0h3" />
+          </svg>
+          Santiago del Estero, Argentina
+        </li>
+        <li class="flex items-center">
+          <svg class="w-5 h-5 text-[#338281] mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16 12A4 4 0 1 0 8 12a4 4 0 0 0 8 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6" />
+          </svg>
+          +54 385 499 7505
+        </li>
+        <li class="flex items-center">
+          <svg class="w-5 h-5 text-[#338281] mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16 12A4 4 0 1 0 8 12a4 4 0 0 0 8 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2 12h2m16 0h2M12 2v2m0 16v2" />
+          </svg>
+          info@webmentor.com
+        </li>
+        <li class="flex items-center">
+          <svg class="w-5 h-5 text-[#338281] mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8h2a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h2" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v-7m0 0L9.5 9.5M12 8l2.5 1.5" />
+          </svg>
+          <a href="https://webmentor.com" target="_blank" class="hover:underline text-blue-400">www.webmentor.com</a>
+        </li>
+      </ul>
+    </div>
+    <!-- Links del navbar -->
+    <div class="md:w-1/4">
+      <h4 class="text-lg font-semibold text-[#338281] mb-4">Navegación</h4>
+      <ul class="space-y-2">
+        <li><a href="index.html" class="hover:underline underline-offset-4 transition duration-300">Inicio</a></li>
+        <li><a href="#about-us" class="hover:underline underline-offset-4 transition duration-300">Nosotros</a></li>
+        <li><a href="#services" class="hover:underline underline-offset-4 transition duration-300">Servicios</a></li>
+        <li><a href="#tools" class="hover:underline underline-offset-4 transition duration-300">Herramientas</a></li>
+        <li><a href="#faq" class="hover:underline underline-offset-4 transition duration-300">FAQ</a></li>
+        <li><a href="terminos.html" class="hover:underline underline-offset-4 transition duration-300">Términos y Condiciones</a></li>
+      </ul>
+    </div>
+    <!-- Servicios -->
+    <div class="md:w-1/4">
+      <h4 class="text-lg font-semibold text-[#338281] mb-4">Servicios</h4>
+      <ul class="space-y-2">
+        <li><a href="" class="hover:underline underline-offset-4 transition duration-300">Desarrollo Web</a></li>
+        <li><a href="" class="hover:underline underline-offset-4 transition duration-300">Mantenimiento Web</a></li>
+        <li><a href="" class="hover:underline underline-offset-4 transition duration-300">Optimización SEO</a></li>
+        <li><a href="" class="hover:underline underline-offset-4 transition duration-300">E-commerce</a></li>
+        <li><a href="" class="hover:underline underline-offset-4 transition duration-300">Landing Pages</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="mt-10 border-t border-gray-700 pt-6 text-center text-gray-500 text-sm">
+    © 2025 WebMentor. Todos los derechos reservados.
+  </div>
+</footer>
+
+<div
+  style="position: fixed; bottom: 24px; right: 24px; z-index: 50;"
+  class="animate-levitate"
+>
+  <img src="img/Domain Authority 3D Animated Icon (2).png" alt="Imagen fija" class="max-w-[300px] max-h-[150px]" />
+</div>
+<style>
+@keyframes levitate {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+}
+.animate-levitate {
+  animation: levitate 2.5s ease-in-out infinite;
+}
+</style>
+
+<script>
+  // FAQ desplegable
+  document.querySelectorAll('.faq-toggle').forEach(btn => {
+    btn.addEventListener('click', function () {
+      const content = this.nextElementSibling;
+      const icon = this.querySelector('span');
+      if (content.classList.contains('hidden')) {
+        document.querySelectorAll('.faq-content').forEach(el => el.classList.add('hidden'));
+        document.querySelectorAll('.faq-toggle span').forEach(el => el.style.transform = '');
+        content.classList.remove('hidden');
+        icon.style.transform = 'rotate(180deg)';
+      } else {
+        content.classList.add('hidden');
+        icon.style.transform = '';
+      }
+    });
+  });
+</script>
+
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+
+  </body>
+</html>

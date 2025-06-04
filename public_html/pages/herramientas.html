@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Servicios de Creación Web</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .bg-gradient {
+        background: linear-gradient(
+          to bottom,
+          #000,
+          #2b3838
+        ); /* Gradiente de fondo */
+      }
+    </style>
+  </head>
+  <body class="bg-gradient min-h-screen text-white">
+    <header class="py-6 px-4 md:px-8 lg:px-12">
+      <div class="container mx-auto flex justify-between items-center">
+        <a
+          href="#"
+          class="flex items-center text-3xl font-semibold bg-clip-text text-bg-primary"
+          style="font-family: Raleway, sans-serif"
+        >
+          <img
+            src="../img/Logo_WebMentor-removebg-preview.png"
+            alt="Logo WebMentor"
+            class="h-16 w-16 mr-1"
+          />
+          WebMentor
+        </a>
+        <!-- Botón hamburguesa (solo visible en móvil) -->
+        <button
+          id="menu-btn"
+          class="md:hidden text-white focus:outline-none"
+          aria-label="Abrir menú"
+        >
+          <svg
+            class="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+        <!-- Menú de navegación -->
+        <nav id="navbar" class="hidden md:flex space-x-6">
+          <a
+            href="../index.html"
+            class="hover:text-blue-300 transition duration-300"
+            >Inicio</a
+          >
+          <a
+            href="../index.html#about-us"
+            class="hover:text-blue-300 transition duration-300"
+            >Nosotros</a
+          >
+          <a
+            href="../index.html#services"
+            class="hover:text-blue-300 transition duration-300"
+            >Servicios</a
+          >
+          <a
+            href="herramientas.html"
+            class="hover:text-blue-300 transition duration-300"
+            >Herramientas</a
+          >
+          <a
+            href="../index.html#faq"
+            class="hover:text-blue-300 transition duration-300"
+            >FAQ</a
+          >
+        </nav>
+        <a
+          href="../index.html#contact"
+          class="hidden md:inline-block bg-gradient-to-r from-[#338281] to-[#2b3838] text-white px-6 py-3 rounded-full hover:from-[#2b3838] hover:bg-[#338281] transition duration-300"
+        >
+          Contáctanos
+        </a>
+      </div>
+      <!-- Menú móvil (oculto por defecto) -->
+      <div id="mobile-menu" class="md:hidden hidden px-4 pt-4 pb-2">
+        <nav class="flex flex-col space-y-2">
+          <a
+            href="../index.html"
+            class="hover:text-blue-300 transition duration-300"
+            >Inicio</a
+          >
+          <a
+            href="../index.html#about-us"
+            class="hover:text-blue-300 transition duration-300"
+            >Nosotros</a
+          >
+          <a
+            href="../index.html#services"
+            class="hover:text-blue-300 transition duration-300"
+            >Servicios</a
+          >
+          <a
+            href="herramientas.html"
+            class="hover:text-blue-300 transition duration-300"
+            >Herramientas</a
+          >
+          <a
+            href="../index.html#faq"
+            class="hover:text-blue-300 transition duration-300"
+            >FAQ</a
+          >
+          <a
+            href="../index.html#contact"
+            class="mt-2 bg-gradient-to-r from-[#338281] to-[#2b3838] text-white px-6 py-3 rounded-full hover:from-[#2b3838] hover:to-[#338281] transition duration-300 text-center"
+            >Contáctanos</a
+          >
+        </nav>
+      </div>
+    </header>
+    <main class="py-16 px-4 md:px-8 lg:px-12 flex flex-col items-center">
+      <!-- Título y descripción fuera del contenedor principal -->
+      <h1
+        class="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-[#338281] to-[#f1f1f1] mb-4 text-center"
+        style="font-family: 'Raleway', sans-serif"
+      >
+        Gestiona tus Finanzas con Nuestra Plantilla Profesional
+      </h1>
+      <p class="text-lg text-gray-300 mb-10 text-center max-w-2xl">
+        La herramienta que necesitas para controlar ingresos, gastos,
+        presupuestos y ahorrar inteligentemente.
+      </p>
+      <!-- ...código anterior del contenedor principal... -->
+      <div
+        class="bg-[#232b2b] rounded-xl shadow-xl max-w-5xl w-full p-8 flex flex-col md:flex-row items-center md:items-start gap-10"
+      >
+        <!-- Imagen a la izquierda -->
+        <div class="w-full md:w-1/2 flex justify-center mb-8 md:mb-0">
+          <img
+            src="../img/image-plantilla.png"
+            alt="Plantilla Excel Finanzas Personales"
+            class="w-full max-w-[600px] max-h-[600px] object-contain rounded-lg shadow-lg bg-white"
+          />
+        </div>
+        <!-- Información de compra a la derecha -->
+        <div class="w-full md:w-2/3 flex flex-col items-center md:items-start">
+          <h2
+            class="text-2xl font-bold mb-2 text-[#2E7071] text-center md:text-left"
+          >
+            Plantilla Excel para Finanzas Personales
+          </h2>
+          <p class="text-base text-gray-200 mb-4 text-center md:text-left">
+            Organiza tus ingresos, gastos y ahorros de manera simple y
+            visual.<br />
+            <span class="text-[#338281] font-semibold">Incluye:</span> gráficos
+            automáticos, categorías personalizables, control de deudas y metas
+            de ahorro.<br />
+            Ideal para quienes quieren tomar el control de su economía personal
+            o familiar.
+          </p>
+          <div class="flex items-center mb-8 space-x-4">
+            <span
+              class="text-xl md:text-2xl font-bold text-red-500 line-through"
+              >$25 USD</span
+            >
+            <span class="text-2xl md:text-3xl font-bold text-[#338281]"
+              >$10 USD</span
+            >
+          </div>
+          <button
+            id="btn-comprar"
+            class="w-full bg-[#338281] text-black px-8 py-3 rounded-full font-semibold hover:bg-[#2E7071] hover:text-white transition duration-300 text-lg mb-8"
+          >
+            Comprar
+          </button>
+        </div>
+      </div>
+      <!-- Beneficios: debajo del contenedor principal, ocupa todo el ancho -->
+      <section
+        class="w-full max-w-5xl mt-12 bg-[#232b2b] rounded-xl shadow-lg p-8 mx-auto"
+      >
+        <h2
+          class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-[#338281] to-[#f1f1f1] mb-6 text-center"
+          style="font-family: 'Raleway', sans-serif"
+        >
+          Beneficios de usar una plantilla de finanzas personales
+        </h2>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 text-lg text-gray-200">
+          <li class="flex items-start gap-3">
+            <svg
+              class="w-6 h-6 text-[#338281] flex-shrink-0 mt-1"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5 13l4 4L19 7"
+              />
+            </svg>
+            Visualiza tus ingresos y gastos de forma clara y ordenada.
+          </li>
+          <li class="flex items-start gap-3">
+            <svg
+              class="w-6 h-6 text-[#338281] flex-shrink-0 mt-1"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5 13l4 4L19 7"
+              />
+            </svg>
+            Identifica oportunidades de ahorro y reduce gastos innecesarios.
+          </li>
+          <li class="flex items-start gap-3">
+            <svg
+              class="w-6 h-6 text-[#338281] flex-shrink-0 mt-1"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5 13l4 4L19 7"
+              />
+            </svg>
+            Establece y sigue metas financieras personales o familiares.
+          </li>
+          <li class="flex items-start gap-3">
+            <svg
+              class="w-6 h-6 text-[#338281] flex-shrink-0 mt-1"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5 13l4 4L19 7"
+              />
+            </svg>
+            Toma mejores decisiones con reportes y gráficos automáticos.
+          </li>
+          <li class="flex items-start gap-3">
+            <svg
+              class="w-6 h-6 text-[#338281] flex-shrink-0 mt-1"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5 13l4 4L19 7"
+              />
+            </svg>
+            Controla deudas y evita atrasos en pagos importantes.
+          </li>
+          <li class="flex items-start gap-3">
+            <svg
+              class="w-6 h-6 text-[#338281] flex-shrink-0 mt-1"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5 13l4 4L19 7"
+              />
+            </svg>
+            Fácil de usar y personalizar según tus necesidades.
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- Modal de compra -->
+    <div
+      id="modal-compra"
+      class="fixed inset-0 flex items-center justify-center z-50 hidden"
+    >
+      <div class="modal-bg absolute inset-0 bg-black bg-opacity-70"></div>
+      <div
+        class="relative bg-[#232b2b] rounded-xl shadow-2xl p-8 max-w-2xl w-full z-10"
+      >
+        <button
+          id="cerrar-modal"
+          class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl font-bold"
+        >
+          &times;
+        </button>
+        <h2 class="text-2xl font-bold text-[#2E7071] mb-6 text-center">
+          Elige tu método de pago
+        </h2>
+        <div class="space-y-4">
+          <!-- Transferencia Bancaria -->
+          <div>
+            <button
+              type="button"
+              class="w-full flex justify-between items-center px-4 py-3 rounded-lg bg-[#2d2d2d] text-left font-semibold text-white focus:outline-none metodo-toggle"
+            >
+              Transferencia Bancaria
+              <span class="ml-2 transition-transform duration-300"
+                >&#9660;</span
+              >
+            </button>
+            <div
+              class="metodo-content px-4 py-3 text-gray-300 hidden bg-[#232b2b] rounded-b-lg"
+            >
+              <p>
+                <span class="font-semibold text-[#338281]">Banco:</span> Banco
+                Nación
+              </p>
+              <p>
+                <span class="font-semibold text-[#338281]">CBU:</span>
+                0110123456789012345678
+              </p>
+              <p>
+                <span class="font-semibold text-[#338281]">Alias:</span>
+                WEBMENTOR.FINANZAS
+              </p>
+              <p>
+                <span class="font-semibold text-[#338281]">Titular:</span>
+                WebMentor SRL
+              </p>
+              <p class="mt-2 text-sm text-gray-400">
+                Envía el comprobante a
+                <span class="underline">info@webmentor.com</span> para recibir
+                tu plantilla.
+              </p>
+            </div>
+          </div>
+          <!-- Mercado Pago -->
+          <div>
+            <button
+              type="button"
+              class="w-full flex justify-between items-center px-4 py-3 rounded-lg bg-[#2d2d2d] text-left font-semibold text-white focus:outline-none metodo-toggle"
+            >
+              Mercado Pago
+              <span class="ml-2 transition-transform duration-300"
+                >&#9660;</span
+              >
+            </button>
+            <div
+              class="metodo-content px-4 py-3 text-gray-300 hidden bg-[#232b2b] rounded-b-lg"
+            >
+              <p>
+                <span class="font-semibold text-[#338281]">Alias:</span>
+                webmentor.mp
+              </p>
+              <p>
+                <span class="font-semibold text-[#338281]">CVU:</span>
+                0000003100098765432100
+              </p>
+              <p>
+                <span class="font-semibold text-[#338281]">Titular:</span>
+                WebMentor SRL
+              </p>
+              <p class="mt-2 text-sm text-gray-400">
+                Envía el comprobante a
+                <span class="underline">info@webmentor.com</span> para recibir
+                tu plantilla.
+              </p>
+            </div>
+          </div>
+          <!-- Cripto -->
+          <div>
+            <button
+              type="button"
+              class="w-full flex justify-between items-center px-4 py-3 rounded-lg bg-[#2d2d2d] text-left font-semibold text-white focus:outline-none metodo-toggle"
+            >
+              Cripto (USDT/BTC/ETH)
+              <span class="ml-2 transition-transform duration-300"
+                >&#9660;</span
+              >
+            </button>
+            <div
+              class="metodo-content px-4 py-3 text-gray-300 hidden bg-[#232b2b] rounded-b-lg"
+            >
+              <p>
+                <span class="font-semibold text-[#338281]">USDT (TRC20):</span>
+                TX1234567890ABCDEF1234567890ABCDEF12
+              </p>
+              <p>
+                <span class="font-semibold text-[#338281]">BTC:</span>
+                1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa
+              </p>
+              <p>
+                <span class="font-semibold text-[#338281]">ETH:</span>
+                0x1234567890abcdef1234567890abcdef12345678
+              </p>
+              <p class="mt-2 text-sm text-gray-400">
+                Envía el comprobante a
+                <span class="underline">info@webmentor.com</span> para recibir
+                tu plantilla.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-[#181e1e] text-gray-300 py-12 mt-12">
+      <div
+        class="container mx-auto px-4 flex flex-col md:flex-row md:justify-between gap-12"
+      >
+        <!-- Logo y descripción -->
+        <div class="md:w-1/4 flex flex-col items-center md:items-start">
+          <img
+            src="img/Logo_WebMentor-removebg-preview.png"
+            alt="Logo WebMentor"
+            class="h-16 w-16 mb-4"
+          />
+          <span class="text-xl font-semibold text-white mb-2">WebMentor</span>
+          <p class="text-gray-400 text-sm">
+            Soluciones digitales para potenciar tu negocio.
+          </p>
+        </div>
+        <!-- Información de contacto -->
+        <div class="md:w-1/4">
+          <h4 class="text-lg font-semibold text-[#338281] mb-4">Contacto</h4>
+          <ul class="space-y-2">
+            <li class="flex items-center">
+              <svg
+                class="w-5 h-5 text-[#338281] mr-2"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M16 12A4 4 0 1 0 8 12a4 4 0 0 0 8 0z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 14v7m0 0H9m3 0h3"
+                />
+              </svg>
+              Santiago del Estero, Argentina
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-5 h-5 text-[#338281] mr-2"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M16 12A4 4 0 1 0 8 12a4 4 0 0 0 8 0z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 21l-6-6"
+                />
+              </svg>
+              +54 385 499 7505
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-5 h-5 text-[#338281] mr-2"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M16 12A4 4 0 1 0 8 12a4 4 0 0 0 8 0z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M2 12h2m16 0h2M12 2v2m0 16v2"
+                />
+              </svg>
+              info@webmentor.com
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-5 h-5 text-[#338281] mr-2"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17 8h2a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h2"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 15v-7m0 0L9.5 9.5M12 8l2.5 1.5"
+                />
+              </svg>
+              <a
+                href="https://webmentor.com"
+                target="_blank"
+                class="hover:underline text-blue-400"
+                >www.webmentor.com</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- Links del navbar -->
+        <div class="md:w-1/4">
+          <h4 class="text-lg font-semibold text-[#338281] mb-4">Navegación</h4>
+          <ul class="space-y-2">
+            <li>
+              <a href="#" class="hover:text-blue-300 transition">Inicio</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-blue-300 transition">Nosotros</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-blue-300 transition">Servicios</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-blue-300 transition"
+                >Herramientas</a
+              >
+            </li>
+            <li><a href="#" class="hover:text-blue-300 transition">FAQ</a></li>
+            <li>
+              <a href="terminos.html" class="hover:text-blue-300 transition"
+                >Términos y Condiciones</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- Servicios -->
+        <div class="md:w-1/4">
+          <h4 class="text-lg font-semibold text-[#338281] mb-4">Servicios</h4>
+          <ul class="space-y-2">
+            <li>
+              <a href="#" class="hover:text-blue-300 transition"
+                >Desarrollo Web</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-blue-300 transition"
+                >Mantenimiento Web</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-blue-300 transition"
+                >Optimización SEO</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-blue-300 transition">E-commerce</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-blue-300 transition"
+                >Landing Pages</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="mt-10 border-t border-gray-700 pt-6 text-center text-gray-500 text-sm"
+      >
+        © 2025 WebMentor. Todos los derechos reservados.
+      </div>
+    </footer>
+
+    <div
+      style="position: fixed; bottom: 24px; right: 24px; z-index: 50"
+      class="animate-levitate"
+    >
+      <img
+        src="../img/Domain Authority 3D Animated Icon (2).png"
+        alt="Imagen fija"
+        class="max-w-[300px] max-h-[150px]"
+      />
+    </div>
+    <style>
+      @keyframes levitate {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-18px);
+        }
+      }
+      .animate-levitate {
+        animation: levitate 2.5s ease-in-out infinite;
+      }
+    </style>
+
+    <script>
+      // Abrir modal y bloquear scroll
+      document.getElementById("btn-comprar").onclick = function () {
+        document.getElementById("modal-compra").classList.remove("hidden");
+        document.body.style.overflow = "hidden";
+      };
+      // Cerrar modal y restaurar scroll
+      document.getElementById("cerrar-modal").onclick = function () {
+        document.getElementById("modal-compra").classList.add("hidden");
+        document.body.style.overflow = "";
+        document
+          .querySelectorAll(".metodo-content")
+          .forEach((el) => el.classList.add("hidden"));
+        document
+          .querySelectorAll(".metodo-toggle span")
+          .forEach((el) => (el.style.transform = ""));
+      };
+      // Toggle métodos de pago (tipo select)
+      document.querySelectorAll(".metodo-toggle").forEach((btn) => {
+        btn.addEventListener("click", function () {
+          const content = this.nextElementSibling;
+          const icon = this.querySelector("span");
+          if (content.classList.contains("hidden")) {
+            document
+              .querySelectorAll(".metodo-content")
+              .forEach((el) => el.classList.add("hidden"));
+            document
+              .querySelectorAll(".metodo-toggle span")
+              .forEach((el) => (el.style.transform = ""));
+            content.classList.remove("hidden");
+            icon.style.transform = "rotate(180deg)";
+          } else {
+            content.classList.add("hidden");
+            icon.style.transform = "";
+          }
+        });
+      });
+      // Cerrar modal al hacer click fuera del contenido y restaurar scroll
+      document
+        .getElementById("modal-compra")
+        .addEventListener("click", function (e) {
+          if (e.target === this || e.target.classList.contains("modal-bg")) {
+            this.classList.add("hidden");
+            document.body.style.overflow = "";
+            document
+              .querySelectorAll(".metodo-content")
+              .forEach((el) => el.classList.add("hidden"));
+            document
+              .querySelectorAll(".metodo-toggle span")
+              .forEach((el) => (el.style.transform = ""));
+          }
+        });
+    </script>
+
+    <script>
+      // Menú hamburguesa funcional
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      }
+    </script>
+  </body>
+</html>

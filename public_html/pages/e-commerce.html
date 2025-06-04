@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce a Medida | WebMentor</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Raleway:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .bg-gradient {
+        background: linear-gradient(to bottom, #000, #2b3838, #000);
+      }
+    </style>
+  </head>
+  <body class="bg-gradient text-white min-h-screen">
+    <!-- Header -->
+    <header class="py-6 px-4 md:px-8 lg:px-12">
+      <div class="container mx-auto flex justify-between items-center">
+        <a
+          href="../index.html"
+          class="flex items-center text-3xl font-semibold bg-clip-text text-bg-primary"
+          style="font-family: Raleway, sans-serif"
+        >
+          <img
+            src="../img/Logo_WebMentor-removebg-preview.png"
+            alt="Logo WebMentor"
+            class="h-16 w-16 mr-1"
+          />
+          WebMentor
+        </a>
+        <!-- Botón hamburguesa (solo visible en móvil) -->
+        <button
+          id="menu-btn"
+          class="md:hidden text-white focus:outline-none"
+          aria-label="Abrir menú"
+        >
+          <svg
+            class="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+        <!-- Menú de navegación -->
+        <nav id="navbar" class="hidden md:flex space-x-6">
+          <a
+            href="../index.html"
+            class="hover:underline underline-offset-4 transition duration-300"
+            >Inicio</a
+          >
+          <a
+            href="../index.html#about-us"
+            class="hover:underline underline-offset-4 transition duration-300"
+            >Nosotros</a
+          >
+          <a
+            href="../index.html#services"
+            class="hover:underline underline-offset-4 transition duration-300"
+            >Servicios</a
+          >
+          <a
+            href="herramientas.html"
+            class="hover:underline underline-offset-4 transition duration-300"
+            >Herramientas</a
+          >
+          <a
+            href="../index.html#faq"
+            class="hover:underline underline-offset-4 transition duration-300"
+            >FAQ</a
+          >
+        </nav>
+        <a
+          href="../index.html#contact"
+          class="hidden md:inline-block bg-gradient-to-r from-[#338281] to-[#2b3838] text-white px-6 py-3 rounded-full hover:from-[#2b3838] hover:bg-[#338281] transition duration-300"
+        >
+          Contáctanos
+        </a>
+      </div>
+      <!-- Menú móvil (oculto por defecto) -->
+      <div id="mobile-menu" class="md:hidden hidden px-4 pt-4 pb-2">
+        <nav class="flex flex-col space-y-2">
+          <a
+            href="../index.html"
+            class="hover:underline underline-offset-4 transition duration-300"
+            >Inicio</a
+          >
+          <a
+            href="../index.html#about-us"
+            class="hover:underline underline-offset-4 transition duration-300"
+            >Nosotros</a
+          >
+          <a
+            href="../index.html#services"
+            class="hover:underline underline-offset-4 transition duration-300"
+            >Servicios</a
+          >
+          <a
+            href="herramientas.html"
+            class="hover:underline underline-offset-4 transition duration-300"
+            >Herramientas</a
+          >
+          <a
+            href="../index.html#faq"
+            class="hover:underline underline-offset-4 transition duration-300"
+            >FAQ</a
+          >
+          <a
+            href="../index.html#contact"
+            class="mt-2 bg-gradient-to-r from-[#338281] to-[#2b3838] text-white px-6 py-3 rounded-full hover:from-[#2b3838] hover:to-[#338281] transition duration-300 text-center"
+            >Contáctanos</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main class="py-16 px-4 md:px-8 lg:px-12 flex flex-col items-center">
+      <section
+        class="w-full max-w-5xl mx-auto bg-[#232b2b] rounded-xl shadow-xl p-8"
+      >
+        <h1
+          class="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-[#338281] to-[#f1f1f1] mb-6 text-center leading-tight pt-2 pb-2"
+          style="font-family: 'Raleway', sans-serif"
+        >
+          Tu Tienda Online Soñada
+        </h1>
+        <p class="text-lg text-gray-300 mb-10 text-center">
+          Creamos tiendas online atractivas y funcionales, con diseño
+          personalizado, carrito de compras, pasarelas de pago y mucho más.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
+          <div>
+            <h2 class="text-2xl font-bold mb-4" style="color: #6ca8a4">
+              ¿Por Qué un E-commerce es Esencial para tu Negocio?
+            </h2>
+            <p class="text-gray-200 mb-4">
+              En el mundo digital actual, un e-commerce te permite llegar a
+              clientes en cualquier lugar y momento. Una tienda online no solo
+              amplía tu alcance, sino que también ofrece comodidad y
+              flexibilidad a tus compradores.
+            </p>
+            <ul class="list-disc list-inside text-gray-300 space-y-2">
+              <li>
+                <span class="text-[#338281] font-semibold">Ventas 24/7:</span>
+                Tu tienda siempre abierta para generar ingresos.
+              </li>
+              <li>
+                <span class="text-[#338281] font-semibold"
+                  >Alcance Global:</span
+                >
+                Llega a clientes más allá de tu ubicación física.
+              </li>
+              <li>
+                <span class="text-[#338281] font-semibold"
+                  >Gestión Simplificada:</span
+                >
+                Automatiza procesos y reduce costos operativos.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="text-2xl font-bold mb-4" style="color: #6ca8a4">
+              Nuestros Servicios de Diseño Web para E-commerce
+            </h2>
+            <ul class="space-y-3 text-gray-200">
+              <li class="flex items-start gap-2">
+                <svg
+                  class="w-6 h-6 text-[#338281] flex-shrink-0 mt-1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span
+                  ><span class="font-semibold text-[#338281]"
+                    >Diseño Personalizado:</span
+                  >
+                  Creamos una tienda online que refleja tu marca y
+                  productos.</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <svg
+                  class="w-6 h-6 text-[#338281] flex-shrink-0 mt-1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span
+                  ><span class="font-semibold text-[#338281]"
+                    >Carrito de Compras Intuitivo:</span
+                  >
+                  Facilita el proceso de compra para tus clientes.</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <svg
+                  class="w-6 h-6 text-[#338281] flex-shrink-0 mt-1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span
+                  ><span class="font-semibold text-[#338281]"
+                    >Pasarelas de Pago Seguras:</span
+                  >
+                  Integración con múltiples opciones de pago.</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <svg
+                  class="w-6 h-6 text-[#338281] flex-shrink-0 mt-1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span
+                  ><span class="font-semibold text-[#338281]"
+                    >Gestión de Inventario:</span
+                  >
+                  Controla tus productos y stock de manera eficiente.</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <svg
+                  class="w-6 h-6 text-[#338281] flex-shrink-0 mt-1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span
+                  ><span class="font-semibold text-[#338281]"
+                    >Optimización para Móviles:</span
+                  >
+                  Tu tienda se verá perfecta en cualquier dispositivo.</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
+          <div>
+            <h2 class="text-2xl font-bold mb-4" style="color: #6ca8a4">
+              Características Destacadas de Nuestras Tiendas Online
+            </h2>
+            <ul class="space-y-3 text-gray-200">
+              <li class="flex items-start gap-2">
+                <svg
+                  class="w-6 h-6 text-[#338281] flex-shrink-0 mt-1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                Diseño Atractivo y Profesional: Que destaque tus productos.
+              </li>
+              <li class="flex items-start gap-2">
+                <svg
+                  class="w-6 h-6 text-[#338281] flex-shrink-0 mt-1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                Navegación Fácil y Clara: Para una experiencia de compra fluida.
+              </li>
+              <li class="flex items-start gap-2">
+                <svg
+                  class="w-6 h-6 text-[#338281] flex-shrink-0 mt-1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                Filtros y Búsquedas Avanzadas: Ayuda a los clientes a encontrar
+                lo que buscan.
+              </li>
+              <li class="flex items-start gap-2">
+                <svg
+                  class="w-6 h-6 text-[#338281] flex-shrink-0 mt-1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                Galería de Productos de Alta Calidad: Muestra tus productos con
+                detalle.
+              </li>
+              <li class="flex items-start gap-2">
+                <svg
+                  class="w-6 h-6 text-[#338281] flex-shrink-0 mt-1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                Integración con Redes Sociales: Conecta con tus clientes y
+                promociona tus productos.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="text-2xl font-bold mb-4" style="color: #6ca8a4">
+              Opciones de Diseño
+            </h2>
+            <ul class="space-y-3 text-gray-200">
+              <li class="flex items-start gap-2">
+                <svg
+                  class="w-6 h-6 text-[#338281] flex-shrink-0 mt-1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                Tienda Minimalista: Ideal para productos con diseño destacado.
+              </li>
+              <li class="flex items-start gap-2">
+                <svg
+                  class="w-6 h-6 text-[#338281] flex-shrink-0 mt-1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                Tienda Moderna y Dinámica: Para una experiencia de compra
+                interactiva.
+              </li>
+              <li class="flex items-start gap-2">
+                <svg
+                  class="w-6 h-6 text-[#338281] flex-shrink-0 mt-1"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                Tienda Especializada: Adaptada a nichos específicos de mercado.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="mb-12">
+          <h2 class="text-2xl font-bold mb-4" style="color: #6ca8a4">
+            Servicios Adicionales (Sin Costo Extra)
+          </h2>
+          <ul class="space-y-3 text-gray-200">
+            <li class="flex items-start gap-2">
+              <svg
+                class="w-6 h-6 text-[#338281] flex-shrink-0 mt-1"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+              Integración con Google Analytics: Seguimiento de ventas y
+              comportamiento del cliente.
+            </li>
+            <li class="flex items-start gap-2">
+              <svg
+                class="w-6 h-6 text-[#338281] flex-shrink-0 mt-1"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+              Optimización SEO: Mejora la visibilidad de tu tienda en
+              buscadores.
+            </li>
+            <li class="flex items-start gap-2">
+              <svg
+                class="w-6 h-6 text-[#338281] flex-shrink-0 mt-1"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+              Certificado SSL: Seguridad para las transacciones de tus clientes.
+            </li>
+            <li class="flex items-start gap-2">
+              <svg
+                class="w-6 h-6 text-[#338281] flex-shrink-0 mt-1"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+              Formulario de Contacto y Atención al Cliente: Para resolver dudas
+              y consultas.
+            </li>
+            <li class="flex items-start gap-2">
+              <svg
+                class="w-6 h-6 text-[#338281] flex-shrink-0 mt-1"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+              Diseño Web adaptable a cualquier dispositivo.
+            </li>
+          </ul>
+        </div>
+        <div class="flex flex-col items-center">
+          <a
+            href="../index.html#contact"
+            class="inline-block bg-[#338281] text-white font-semibold px-10 py-4 rounded-full shadow-lg hover:bg-[#2E7071] hover:text-white transition duration-300 text-lg"
+          >
+            ¡Lleva tu negocio al siguiente nivel!
+          </a>
+          <p class="mt-4 text-gray-400 text-center">
+            Contáctanos para crear tu tienda online y aumentar tus ventas.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#181e1e] text-gray-300 py-12 mt-12">
+      <div
+        class="container mx-auto px-4 flex flex-col md:flex-row md:justify-between gap-12"
+      >
+        <!-- Logo y descripción -->
+        <div class="md:w-1/4 flex flex-col items-center md:items-start">
+          <img
+            src="../img/Logo_WebMentor-removebg-preview.png"
+            alt="Logo WebMentor"
+            class="h-16 w-16 mb-4"
+          />
+          <span class="text-xl font-semibold text-white mb-2">WebMentor</span>
+          <p class="text-gray-400 text-sm">
+            Soluciones digitales para potenciar tu negocio.
+          </p>
+        </div>
+        <!-- Información de contacto -->
+        <div class="md:w-1/4">
+          <h4 class="text-lg font-semibold text-[#338281] mb-4">Contacto</h4>
+          <ul class="space-y-2">
+            <li class="flex items-center">
+              <svg
+                class="w-5 h-5 text-[#338281] mr-2"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M16 12A4 4 0 1 0 8 12a4 4 0 0 0 8 0z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 14v7m0 0H9m3 0h3"
+                />
+              </svg>
+              Santiago del Estero, Argentina
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-5 h-5 text-[#338281] mr-2"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M16 12A4 4 0 1 0 8 12a4 4 0 0 0 8 0z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 21l-6-6"
+                />
+              </svg>
+              +54 385 499 7505
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-5 h-5 text-[#338281] mr-2"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M16 12A4 4 0 1 0 8 12a4 4 0 0 0 8 0z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M2 12h2m16 0h2M12 2v2m0 16v2"
+                />
+              </svg>
+              info@webmentor.com
+            </li>
+            <li class="flex items-center">
+              <svg
+                class="w-5 h-5 text-[#338281] mr-2"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17 8h2a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h2"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 15v-7m0 0L9.5 9.5M12 8l2.5 1.5"
+                />
+              </svg>
+              <a
+                href="https://webmentor.com"
+                target="_blank"
+                class="hover:underline text-blue-400"
+                >www.webmentor.com</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- Links del navbar -->
+        <div class="md:w-1/4">
+          <h4 class="text-lg font-semibold text-[#338281] mb-4">Navegación</h4>
+          <ul class="space-y-2">
+            <li>
+              <a
+                href="../index.html"
+                class="hover:underline underline-offset-4 transition duration-300"
+                >Inicio</a
+              >
+            </li>
+            <li>
+              <a
+                href="../index.html#about-us"
+                class="hover:underline underline-offset-4 transition duration-300"
+                >Nosotros</a
+              >
+            </li>
+            <li>
+              <a
+                href="../index.html#services"
+                class="hover:underline underline-offset-4 transition duration-300"
+                >Servicios</a
+              >
+            </li>
+            <li>
+              <a
+                href="herramientas.html"
+                class="hover:underline underline-offset-4 transition duration-300"
+                >Herramientas</a
+              >
+            </li>
+            <li>
+              <a
+                href="../index.html#faq"
+                class="hover:underline underline-offset-4 transition duration-300"
+                >FAQ</a
+              >
+            </li>
+            <li>
+              <a
+                href="../terminos.html"
+                class="hover:underline underline-offset-4 transition duration-300"
+                >Términos y Condiciones</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- Servicios -->
+        <div class="md:w-1/4">
+          <h4 class="text-lg font-semibold text-[#338281] mb-4">Servicios</h4>
+          <ul class="space-y-2">
+            <li>
+              <a
+                href="#"
+                class="hover:underline underline-offset-4 transition duration-300"
+                >Desarrollo Web</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:underline underline-offset-4 transition duration-300"
+                >Mantenimiento Web</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:underline underline-offset-4 transition duration-300"
+                >Optimización SEO</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:underline underline-offset-4 transition duration-300"
+                >E-commerce</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:underline underline-offset-4 transition duration-300"
+                >Landing Pages</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="mt-10 border-t border-gray-700 pt-6 text-center text-gray-500 text-sm"
+      >
+        © 2025 WebMentor. Todos los derechos reservados.
+      </div>
+    </footer>
+    <script>
+      // Menú móvil
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      }
+    </script>
+  </body>
+</html>
