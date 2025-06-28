@@ -3,16 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Servicios de Creación Web</title>
+    <title>Agencia de Desarrollo Web | WebMentor</title>
+
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <meta name="description" content="WebMentor: Desarrollo web profesional, diseño de sitios, tiendas online, mantenimiento, SEO y soluciones digitales para tu negocio. ¡Impulsa tu presencia online!">
+
+    <meta name="keywords" content="desarrollo web, diseño web, tiendas online, ecommerce, landing page, mantenimiento web, SEO, soluciones digitales, WebMentor, Santiago del Estero, Argentina">
+
+    <meta name="author" content="WebMentor">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://webmentor.com/">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <style>
       body {
@@ -27,6 +44,14 @@
           #2b3838,
           #000
         ); /* Gradiente de fondo */
+      }
+
+      @keyframes levitate {
+        0%, 100% { transform: translateY(0);}
+        50% { transform: translateY(-18px);}
+      }
+      .animate-levitate {
+        animation: levitate 2.2s ease-in-out infinite;
       }
     </style>
   </head>
@@ -121,11 +146,11 @@
       <section class="py-16 px-4 md:px-8 lg:px-12 mb-12">
         <div class="container mx-auto text-center">
           <h1
-            class="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-[#338281] to-[#f1f1f1] mb-4 leading-normal pb-2 mt-4"
+            class="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-[#338281] to-[#f1f1f1] mb-4 leading-normal pb-2 mt-4 animate__animated animate__bounceInRight"
           >
             Impulsamos tu negocio con Soluciones Digitales
           </h1>
-          <p class="text-lg text-gray-300 mb-8">
+          <p class="text-lg text-gray-300 mb-8 animate__animated animate__bounceInLeft">
             Un equipo de expertos en desarrollo web apasionados por crear
             soluciones innovadoras y efectivas.
           </p>
@@ -149,8 +174,9 @@
     <div class="flex flex-col md:flex-row items-center gap-12">
       <!-- Columna Imagen -->
       <div class="md:w-1/2 flex justify-center mb-8 md:mb-0">
-        <img src="img/Domain Authority 3D Animated Icon.png" alt="Servicios WebMentor" class="" />
+        <img src="img/Domain Authority 3D Animated Icon.png" alt="Servicios WebMentor" class="animate-levitate" />
       </div>
+
       <!-- Columna Servicios -->
       <div class="md:w-1/2">
         <ul class="space-y-8">
@@ -361,7 +387,7 @@
             <img
               src="img/Domain Authority 3D Animated Icon (1).png"
               alt="Valores WebMentor"
-              class="rounded-lg shadow-lg max-w-xs w-full"
+              class="rounded-lg shadow-lg max-w-xs w-full animate-levitate"
             />
           </div>
         </div>
@@ -378,27 +404,23 @@
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="bg-[#2B4545] rounded-lg p-6">
               <p class="text-gray-300 mb-4">
-                "El equipo de WebMentor superó nuestras expectativas. Su
-                profesionalismo y atención al detalle son excepcionales."
+                "Me gusta mucho el trabajo de WebMentor. Son profesionales y
+                siempre están dispuestos a ayudar."
               </p>
-              <p class="text-blue-400 font-semibold">Juan Pérez</p>
-              <p class="text-gray-500">CEO de Empresa XYZ</p>
+              <p class="text-blue-400 font-semibold">Rodrigo Leguizamón</p>
             </div>
             <div class="bg-[#2B4545] rounded-lg p-6">
               <p class="text-gray-300 mb-4">
-                "Gracias a WebMentor, nuestro sitio web ha mejorado
-                significativamente. ¡Recomendados al 100%!"
+                "Buen servicio, atención al cliente y resultados."
               </p>
-              <p class="text-blue-400 font-semibold">María López</p>
-              <p class="text-gray-500">Gerente de Marketing</p>
+              <p class="text-blue-400 font-semibold">Tomás Molina</p>
             </div>
             <div class="bg-[#2B4545] rounded-lg p-6">
               <p class="text-gray-300 mb-4">
-                "Un equipo increíble. Siempre dispuestos a ayudar y resolver
-                cualquier duda."
+                "El sitio web está muy bien diseñado y es fácil de usar. Me encanta
+                cómo se ve y funciona."
               </p>
               <p class="text-blue-400 font-semibold">Carlos García</p>
-              <p class="text-gray-500">Fundador de Startup ABC</p>
             </div>
         </div>
       </section>
@@ -485,18 +507,18 @@
           <div class="flex flex-col md:flex-row gap-8 justify-center items-stretch">
             <!-- Formulario -->
             <div class="bg-[#2d2d2d] rounded-lg shadow-lg p-8 flex-1">
-              <form class="space-y-6">
+              <form class="space-y-6" action="https://formspree.io/f/xvgrwejj" method="post">
                 <div>
                   <label for="nombre" class="block text-gray-300 mb-2">Nombre</label>
-                  <input type="text" id="nombre" name="nombre" required class="w-full px-4 py-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-[#338281] transition" />
+                  <input type="text" id="name" name="Nombre" required class="w-full px-4 py-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-[#338281] transition" />
                 </div>
                 <div>
                   <label for="email" class="block text-gray-300 mb-2">Email</label>
-                  <input type="email" id="email" name="email" required class="w-full px-4 py-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-[#338281] transition" />
+                  <input type="email" id="Email" name="Email" required class="w-full px-4 py-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-[#338281] transition" />
                 </div>
                 <div>
                   <label for="mensaje" class="block text-gray-300 mb-2">Mensaje</label>
-                  <textarea id="mensaje" name="mensaje" rows="4" required class="w-full px-4 py-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-[#338281] transition"></textarea>
+                  <textarea id="Mensaje" name="Mensaje" rows="4" required class="w-full px-4 py-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-[#338281] transition"></textarea>
                 </div>
                 <button type="submit" class="w-full bg-gradient-to-r from-[#338281] to-[#2b3838] text-white py-3 rounded-full font-semibold hover:from-[#2b3838] hover:to-[#338281] transition duration-300">
                   Enviar Mensaje
@@ -525,7 +547,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" d="M16 12A4 4 0 1 0 8 12a4 4 0 0 0 8 0z" />
                   <path stroke-linecap="round" stroke-linejoin="round" d="M2 12h2m16 0h2M12 2v2m0 16v2" />
                 </svg>
-                <span class="text-gray-300">info@webmentor.com</span>
+                <span class="text-gray-300">webmentor0@gmail.com</span>
               </div>
               <div class="flex items-center">
                 <svg class="w-7 h-7 text-[#338281] mr-4 animate-bounce" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -698,7 +720,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M16 12A4 4 0 1 0 8 12a4 4 0 0 0 8 0z" />
             <path stroke-linecap="round" stroke-linejoin="round" d="M2 12h2m16 0h2M12 2v2m0 16v2" />
           </svg>
-          info@webmentor.com
+          webmentor0@gmail.com
         </li>
         <li class="flex items-center">
           <svg class="w-5 h-5 text-[#338281] mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -718,7 +740,7 @@
         <li><a href="#services" class="hover:underline underline-offset-4 transition duration-300">Servicios</a></li>
         <li><a href="#tools" class="hover:underline underline-offset-4 transition duration-300">Herramientas</a></li>
         <li><a href="#faq" class="hover:underline underline-offset-4 transition duration-300">FAQ</a></li>
-        <li><a href="terminos.html" class="hover:underline underline-offset-4 transition duration-300">Términos y Condiciones</a></li>
+        <li><a href="pages/terminos-y-condiciones.html" class="hover:underline underline-offset-4 transition duration-300">Términos y Condiciones</a></li>
       </ul>
     </div>
     <!-- Servicios -->
@@ -738,21 +760,114 @@
   </div>
 </footer>
 
-<div
-  style="position: fixed; bottom: 24px; right: 24px; z-index: 50;"
-  class="animate-levitate"
->
-  <img src="img/Domain Authority 3D Animated Icon (2).png" alt="Imagen fija" class="max-w-[300px] max-h-[150px]" />
+<div id="robot-chat-container" style="position: fixed; bottom: 24px; right: 24px; z-index: 60;">
+  <!-- Pestaña "Click" estilo mensaje de texto -->
+  <div id="robot-hint"
+    style="
+      position: absolute;
+      right: 100px;
+      bottom: 70px;
+      background: #338281;
+      color: #fff;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 8px 18px;
+      border-radius: 18px 18px 0px 18px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+      pointer-events: none;
+      animation: levitate 2.2s ease-in-out infinite;
+      white-space: nowrap;
+    ">
+    ¡Click!
+  </div>
+<div id="robot-chat-container" style="position: fixed; bottom: 24px; right: 24px; z-index: 60;">
+  <!-- Robot animado -->
+  <div id="robot-icon" style="cursor:pointer; display: flex; align-items: flex-end;">
+    <img src="img/Domain Authority 3D Animated Icon (2).png" alt="Robot WebMentor" class="max-w-[130px] max-h-[130px] animate-levitate" />
+  </div>
+  <!-- Pestaña de chat WhatsApp ficticio -->
+    <div id="chat-bubble" class="hidden" style="position: absolute; bottom: 130px; right: 0; width: 320px; max-width: 90vw; height: 420px;">
+      <div class="rounded-xl shadow-2xl bg-white text-gray-900 overflow-hidden border border-[#338281] h-full flex flex-col">
+      <!-- Header -->
+      <div class="flex items-center gap-3 px-4 py-3 bg-[#338281] text-white">
+        <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp" class="w-7 h-7 rounded-full" />
+        <div>
+          <div class="font-semibold">WebMentor Bot</div>
+          <div class="text-xs text-[#d1fae5]">Responde en minutos</div>
+        </div>
+        <button id="close-chat" class="ml-auto text-white hover:text-gray-200 text-2xl leading-none">&times;</button>
+      </div>
+      <!-- Mensajes -->
+      <div class="px-4 py-3 space-y-2 bg-[#f7fafc] flex-1 min-h-[120px] max-h-full overflow-y-auto text-sm">
+        <div class="flex gap-2 items-end">
+          <div class="bg-[#e2e8f0] text-gray-800 px-3 py-2 rounded-2xl rounded-bl-none max-w-[80%]">
+            ¡Hola! 👋 Soy el asistente virtual de WebMentor.<br>
+            ¿En qué puedo ayudarte?
+          </div>
+        </div>
+      </div>
+      <!-- Input real para WhatsApp -->
+      <form id="whatsapp-form" class="flex items-center px-3 py-2 bg-[#f7fafc] border-t border-gray-200">
+        <input
+          type="text"
+          id="whatsapp-message"
+          placeholder="Escribe tu mensaje..."
+          class="flex-1 bg-transparent text-gray-900 px-2 py-1 outline-none"
+          autocomplete="off"
+          required
+        />
+        <button
+          type="submit"
+          class="ml-2 text-[#338281] hover:text-[#2b3838] transition"
+          aria-label="Enviar mensaje"
+        >
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
 </div>
 <style>
+
 @keyframes levitate {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-18px); }
+  0%, 100% { transform: translateY(0);}
+  50% { transform: translateY(-18px);}
 }
 .animate-levitate {
-  animation: levitate 2.5s ease-in-out infinite;
+  animation: levitate 2.2s ease-in-out infinite;
 }
 </style>
+<!-- ...existing code... -->
+<script>
+  // Mostrar/ocultar chat ficticio al hacer click en el robot
+  const robotIcon = document.getElementById('robot-icon');
+  const chatBubble = document.getElementById('chat-bubble');
+  const closeChat = document.getElementById('close-chat');
+  let chatVisible = false;
+
+  robotIcon.addEventListener('click', () => {
+    chatBubble.classList.toggle('hidden');
+    chatVisible = !chatVisible;
+  });
+
+  closeChat.addEventListener('click', () => {
+    chatBubble.classList.add('hidden');
+    chatVisible = false;
+  });
+
+  // WhatsApp chat funcional
+  document.getElementById('whatsapp-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const mensaje = document.getElementById('whatsapp-message').value.trim();
+    if (mensaje.length === 0) return;
+    // Reemplaza el número por tu número real de WhatsApp en formato internacional sin +
+    const numero = "543854997505";
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, '_blank');
+  });
+</script>
 
 <script>
   // FAQ desplegable
@@ -782,4 +897,5 @@
     </script>
 
   </body>
+  
 </html>
